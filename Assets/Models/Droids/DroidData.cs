@@ -27,7 +27,7 @@ public class DroidData {
 		attack = droid.Attack;
 		defense = droid.Defense;
 		hp = droid.HP;
-		crySound = droid.CrySound.name;
+		// crySound = droid.CrySound.name;
 
 	}
 

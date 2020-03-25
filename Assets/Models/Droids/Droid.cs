@@ -10,15 +10,15 @@ public class Droid : MonoBehaviour {
 	[SerializeField] private int attack = 0;
 	[SerializeField] private int defense = 0;
 	[SerializeField] private int hp = 10;
-	[SerializeField] private AudioClip crySound;
+	// [SerializeField] private AudioClip crySound;
 
-	private AudioSource audioSource;
+	// private AudioSource audioSource;
 
 	private void Awake()
 	{
 
-		audioSource = GetComponent<AudioSource>();
-		Assert.IsNotNull(crySound);
+		// audioSource = GetComponent<AudioSource>();
+		// Assert.IsNotNull(crySound);
 		
 	}
 
@@ -31,12 +31,12 @@ public class Droid : MonoBehaviour {
 	public int Attack { get { return attack; } }
 	public int Defense { get { return defense; } }
 	public int HP { get { return hp; } }
-	public AudioClip CrySound { get { return crySound; } }
+	// public AudioClip CrySound { get { return crySound; } }
 	
 	private void OnMouseDown()
 	{
 		
-		audioSource.PlayOneShot(crySound);
+		// audioSource.PlayOneShot(crySound);
 
 		PocketDroidsSceneManager[] managers = FindObjectsOfType<PocketDroidsSceneManager>();
 		foreach (PocketDroidsSceneManager manager in managers)
@@ -70,7 +70,7 @@ public class Droid : MonoBehaviour {
 		attack = data.Attack;
 		defense = data.Defense;
 		hp = data.HP;
-		crySound = Resources.Load(data.CrySound) as AudioClip;
+		// crySound = Resources.Load(data.CrySound) as AudioClip;
 
 	}
 	
