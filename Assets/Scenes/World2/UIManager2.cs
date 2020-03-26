@@ -31,26 +31,24 @@ public class UIManager2 : MonoBehaviour
 
     private void Update()
     {
-
-        Player currentPlayer = GameManager.Instance.CurrentPlayer;
-        updateLevel(currentPlayer.Level);
-        updateXP(currentPlayer.XP, currentPlayer.RequiredXP);
+        updateLevel();
+        updateXP();
 
     }
 
-    public void updateLevel(int level)
+    public void updateLevel()
     {
 
-        levelText.text = level.ToString();
+		levelText.text = GameManager.Instance.CurrentPlayer.Level.ToString();
 
     }
 
-    public void updateXP(int currentXP, int requiredXP)
+    public void updateXP()
     {
 
-        xpText.text = currentXP.ToString() + " / " + requiredXP.ToString();
+		xpText.text = GameManager.Instance.CurrentPlayer.XP + " / " + GameManager.Instance.CurrentPlayer.RequiredXP;
 
-    }
+	}
 
     private void toggleMenu()
     {
