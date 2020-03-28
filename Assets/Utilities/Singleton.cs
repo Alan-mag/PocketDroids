@@ -12,7 +12,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour {
 				instance = FindObjectOfType<T>();
 			}
 
-			DontDestroyOnLoad(instance);
+            DontDestroyOnLoad(instance);
 			return instance;
 
 		}
