@@ -1115,6 +1115,7 @@ GameObject:
   - component: {fileID: 1325293417}
   - component: {fileID: 1325293416}
   - component: {fileID: 1325293419}
+  - component: {fileID: 1325293420}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1201,6 +1202,18 @@ MonoBehaviour:
   maxThrowAttempts: 3
   orb: {fileID: 1281132501455070, guid: 28fb4fe948145714ab1573774f34e27d, type: 3}
   spawnPoint: {x: 0.01, y: 2.22, z: -8.35}
+--- !u!114 &1325293420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325293415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d76021f37f52fb14d807f488724be0ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1375605491
 GameObject:
   m_ObjectHideFlags: 0
