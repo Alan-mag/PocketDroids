@@ -22,10 +22,6 @@ public class Droid : MonoBehaviour {
 		
 	}
 
-	private void Start() {
-		DontDestroyOnLoad(this);
-	}
-
 	public float SpawnRate { get { return spawnRate; } }
 	public float CatchRate { get { return catchRate; } }
 	public int Attack { get { return attack; } }

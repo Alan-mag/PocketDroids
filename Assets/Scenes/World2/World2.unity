@@ -187,28 +187,6 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
---- !u!1 &181290209 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1589080780349302, guid: da4c35291f8065643a84f15ad26eb3d4,
-    type: 3}
-  m_PrefabInstance: {fileID: 3720745246963325999}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &181290210
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181290209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a9786fac4390f94c8326c1d169cb73a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xp: 0
-  requiredXP: 100
-  levelBase: 100
-  droids: []
 --- !u!1 &381472458
 GameObject:
   m_ObjectHideFlags: 0
@@ -1831,7 +1809,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ef90495263819d4e819df5fb20598f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentPlayer: {fileID: 181290210}
 --- !u!4 &1226508086
 Transform:
   m_ObjectHideFlags: 0
@@ -2051,7 +2028,7 @@ MonoBehaviour:
   availableDroids:
   - {fileID: 114191975449994276, guid: 1a53d18f11e2d7947a9c142897b0f87f, type: 3}
   - {fileID: 114555249538107090, guid: 5dae46b53ca322a43bbc3dc414df988c, type: 3}
-  player: {fileID: 181290210}
+  player: {fileID: 0}
   waitTime: 180
   startingDroids: 5
   minRange: 5
