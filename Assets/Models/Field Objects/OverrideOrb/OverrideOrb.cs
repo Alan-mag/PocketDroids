@@ -8,9 +8,9 @@ public class OverrideOrb : MonoBehaviour {
 	[SerializeField] private float throwSpeed = 30.0f;
 	[SerializeField] private float collisionStallTime = 2.0f;
 	[SerializeField] private float stallTime = 5.0f;
-	[SerializeField] private AudioClip dropSound;
-	[SerializeField] private AudioClip successSound;
-	[SerializeField] private AudioClip throwSound;
+	//[SerializeField] private AudioClip dropSound;
+	//[SerializeField] private AudioClip successSound;
+	//[SerializeField] private AudioClip throwSound;
 
 	private float lastX;
 	private float lastY;
@@ -35,9 +35,9 @@ public class OverrideOrb : MonoBehaviour {
 
 		Assert.IsNotNull(audioSource);
 		Assert.IsNotNull(rigidbody);
-		Assert.IsNotNull(dropSound);
-		Assert.IsNotNull(successSound);
-		Assert.IsNotNull(throwSound);
+		//Assert.IsNotNull(dropSound);
+		//Assert.IsNotNull(successSound);
+		//Assert.IsNotNull(throwSound);
 	}
 
 	private void Update() {
@@ -150,7 +150,7 @@ public class OverrideOrb : MonoBehaviour {
 		direction = Camera.main.transform.TransformDirection(direction);
 		rigidbody.AddForce((direction* speed)/2.0f + Vector3.up * speed);
 
-		audioSource.PlayOneShot(throwSound);
+		// audioSource.PlayOneShot(throwSound);
 		released = true;
 		holding = false;
 
@@ -172,10 +172,12 @@ public class OverrideOrb : MonoBehaviour {
 
 		trackingCollisions = false;
 		if(other.gameObject.CompareTag(PocketDroidConstants.TAG_DROID)) {
-			audioSource.PlayOneShot(successSound);
+            print("hit robot");
+			// audioSource.PlayOneShot(successSound);
 		} else {
-			audioSource.PlayOneShot(dropSound);
-		}
+            print("missed robot");
+            // audioSource.PlayOneShot(dropSound);
+        }
 
 		Invoke("powerDown", collisionStallTime);
 
